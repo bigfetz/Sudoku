@@ -1,0 +1,8 @@
+Website = "https://example.com"
+
+[Details]
+Icon = "Icon.png"
+Name = "Sudoku"
+ID = "com.matthewfetzer.sudoku"
+Version = "1.0.0"
+Build = 40
