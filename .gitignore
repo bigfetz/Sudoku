@@ -1,0 +1,7 @@
+# Build outputs
+*.apk
+*.ipa
+Sudoku.app/
+
+# Go
+*.test
