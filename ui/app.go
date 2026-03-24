@@ -145,6 +145,7 @@ func (gt *gameTimer) stop() {
 	}
 	gt.done = true
 	if !gt.paused {
+		gt.elapsed += time.Since(gt.startAt) // capture remaining run before stopping
 		close(gt.stopCh)
 	}
 }
@@ -395,6 +396,7 @@ func Run() {
 		elapsed := int(gt.elapsed.Seconds())
 		RecordWin(a.Preferences(), currentDifficulty, elapsed)
 		ClearSession(a.Preferences())
+		bw.WaveAllCells()
 	}
 
 	// Auto-solve: stop the timer but do not record in stats.
